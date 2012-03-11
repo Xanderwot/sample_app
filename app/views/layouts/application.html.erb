@@ -2,34 +2,18 @@
 <html>
 <head>
   <title>Sample App | <%= title %></title>
-  <!--[if 1t IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js></script>"
-  <![endif]-->
-  <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-  <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
-  <!--[if 1t IE 8]>
-  <%= stylesheet_link_tag 'blueprint/ie' %>
-  <![endif]-->
-  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
-  <%= csrf_meta_tag %>
+  <%= render "layouts/stylesheet" %>
 </head>
 <body>
 <div class='container'>
  <header>
   <%= image_tag("logo.png", :alt => "Sample App", :title => "Sample App", :class => "round") %>
-  <nav class="round">
-    <ul>
-
-        <li><%= link_to "Home", pages_home_path %></li>
-        <li><%= link_to "Contacts", pages_contact_path %></li>
-        <li><%= link_to "About", pages_about_path %></li>
-        <li><%= link_to "Help", pages_help_path %></li>
-    </ul>
-   </nav>
+  <%= render "layouts/head" %>
   </header>
   <section class="round">
     <%= yield %>
   </section>
+  <%= render "layouts/footer" %>
 </div> 
 </body>
 </html>
