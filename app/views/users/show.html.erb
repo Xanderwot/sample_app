@@ -1,4 +1,12 @@
+<div id='user_info'>
+<div class='user_profile'>
 <h1>
-<%= gravatar_image_tag @user.email %>	
+<%= gravatar_for @user %>	
 <%= @user.name %>
 </h1>
+</div>
+<div class='sidebar round'>
+ <strong>Name</strong> <%= @user.name %>
+ <strong>url</strong> <%= link_to user_path(@user), @user %>
+</div>
+</div>

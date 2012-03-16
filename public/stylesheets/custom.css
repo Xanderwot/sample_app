@@ -104,3 +104,27 @@ footer {
 footer nav {
  float: none;
 }
+
+#user_info {
+	width: 100%;
+}
+
+.user_profile {
+   width: 250px;
+   margin: 20px 5px 40px 0px;
+   position: static;
+   display: block; 
+}
+
+#user_profile img.gravatar {
+	border: 1px solid #999;
+}
+
+.sidebar {
+	width: 200px;
+	right: 2px;
+	margin: 20px 0px 40px 5px;
+	background-color: rgb(60,155,172);
+	position: static;
+	display: block;
+}
